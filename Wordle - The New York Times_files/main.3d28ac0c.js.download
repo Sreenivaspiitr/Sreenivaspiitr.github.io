@@ -1483,7 +1483,9 @@ this.wordle.bundle = function(e) {
         }, {
             key: "showStatsModal",
             value: function() {
-                var e = this.$game.querySelector("game-modal")
+				// window.localStorage.setItem(wa, JSON.stringify(za()))
+                window.location.reload();
+				var e = this.$game.querySelector("game-modal")
                   , a = document.createElement("game-stats");
                 this.gameStatus === ds && this.rowIndex <= 6 && a.setAttribute("highlight-guess", this.rowIndex),
                 a.gameApp = this,
