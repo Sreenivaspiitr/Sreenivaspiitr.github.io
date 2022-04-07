@@ -394,6 +394,7 @@ this.wordle.bundle = function(e) {
             var n = JSON.parse(window.localStorage.getItem(j))
               , r = window.matchMedia("(prefers-color-scheme: dark)").matches
               , i = JSON.parse(window.localStorage.getItem(S));
+			console.log(n);
             return !0 === n || !1 === n ? e.setDarkTheme(n) : r && e.setDarkTheme(!0),
             !0 !== i && !1 !== i || e.setColorBlindTheme(i),
             window.themeManager = m(e),
@@ -403,7 +404,7 @@ this.wordle.bundle = function(e) {
             key: "setDarkTheme",
             value: function(e) {
                 var a = document.querySelector("body");
-                e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.remove("nightmode"),
+                e && !a.classList.contains("nightmode") ? a.classList.add("nightmode") : a.classList.add("nightmode"),
                 this.isDarkTheme = e,
                 window.localStorage.setItem(j, JSON.stringify(e))
             }
